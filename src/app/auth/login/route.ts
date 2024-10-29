@@ -13,7 +13,7 @@ export const POST = async (req: NextRequest) => {
     cookies: () => cookieStore,
   });
 
-  const response = await supabase.auth.signInWithPassword({
+  await supabase.auth.signInWithPassword({
     email,
     password,
   });
